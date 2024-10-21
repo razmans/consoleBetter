@@ -14,7 +14,7 @@ class ConsoleBetter {
    * @example `log.better('This is an informational message.');`
    * @returns {void}
    */
-  public better(message: string, level: LogLevel = LogLevel.INFO) {
+  better(message: string, level: LogLevel = LogLevel.INFO) {
     if (level === LogLevel.DEBUG && !this.debugEnabled) return;
     const color = colorCodes[level] || '\x1b[0m'; // Default color
     const resetColor = '\x1b[0m'; // Reset color
@@ -30,17 +30,17 @@ class ConsoleBetter {
    * @example `log.toggleDebug(false);` //to disable debug mode
    * By default, log.better will be disabled if toggleDebug==false
    */
-  public toggleDebug(enabled: boolean) {
+  toggleDebug(enabled: boolean) {
     this.debugEnabled = enabled;
   }
-
+  /** 
   /* @module trackPerformance
    * @param {Function} callback - The function to track performance
    * @example `log.trackPerformance(() => {
    *  // Code to track performance
    * })`;
    */
-  public trackPerformance(callback: () => void) {
+  trackPerformance(callback: () => void) {
     const start = performance.now();
     callback();
     const end = performance.now();

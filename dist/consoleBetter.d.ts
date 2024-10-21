@@ -1,7 +1,5 @@
-class ConsoleBetter {
-    constructor() {
-        this.debugEnabled = false;
-    }
+declare class ConsoleBetter {
+    private debugEnabled;
     /**
      * @module better
      * @property {message, level} - The message to log and the log level
@@ -15,13 +13,7 @@ class ConsoleBetter {
      * @example `log.better('This is an informational message.');`
      * @returns {void}
      */
-    better(message, level = LogLevel.INFO) {
-        if (level === LogLevel.DEBUG && !this.debugEnabled)
-            return;
-        const color = colorCodes[level] || '\x1b[0m'; // Default color
-        const resetColor = '\x1b[0m'; // Reset color
-        console.log(`${color}[${level}] ${message}${resetColor}`);
-    }
+    better(message: string, level?: LogLevel): void;
     /**
      * *
      * @module toggleDebug
@@ -31,9 +23,7 @@ class ConsoleBetter {
      * @example `log.toggleDebug(false);` //to disable debug mode
      * By default, log.better will be disabled if toggleDebug==false
      */
-    toggleDebug(enabled) {
-        this.debugEnabled = enabled;
-    }
+    toggleDebug(enabled: boolean): void;
     /**
     /* @module trackPerformance
      * @param {Function} callback - The function to track performance
@@ -41,12 +31,7 @@ class ConsoleBetter {
      *  // Code to track performance
      * })`;
      */
-    trackPerformance(callback) {
-        const start = performance.now();
-        callback();
-        const end = performance.now();
-        console.log(`Execution time: ${end - start} ms`);
-    }
+    trackPerformance(callback: () => void): void;
 }
 /**
  * Enum for log levels
@@ -56,21 +41,13 @@ class ConsoleBetter {
  * @property {string} DEBUG - Debug level
  * @example LogLevel.DEBUG
  */
-export var LogLevel;
-(function (LogLevel) {
-    LogLevel["DEBUG"] = "DEBUG";
-    LogLevel["INFO"] = "INFO";
-    LogLevel["WARN"] = "WARN";
-    LogLevel["ERROR"] = "ERROR";
-    LogLevel["FUNKY"] = "FUNKY";
-})(LogLevel || (LogLevel = {}));
-const colorCodes = {
-    [LogLevel.DEBUG]: '\x1b[34m', // Blue
-    [LogLevel.INFO]: '\x1b[32m', // Green
-    [LogLevel.WARN]: '\x1b[33m', // Yellow
-    [LogLevel.ERROR]: '\x1b[31m', // Red
-    [LogLevel.FUNKY]: '\x1b[35m' // Magenta
-};
+export declare enum LogLevel {
+    DEBUG = "DEBUG",
+    INFO = "INFO",
+    WARN = "WARN",
+    ERROR = "ERROR",
+    FUNKY = "FUNKY"
+}
 /**
  * Custom logger
  * @module ConsoleBetter
@@ -87,5 +64,5 @@ const colorCodes = {
  * // Code to track performance
  * })`; *
  */
-// Create a global instance of the custom logger
-export const log = new ConsoleBetter();
+export declare const log: ConsoleBetter;
+export {};

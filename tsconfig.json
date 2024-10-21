@@ -1,15 +1,14 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",                // Keep 'esnext' for modern module output
-    "outDir": "./dist",
+    "target": "es2020",
+    "module": "esnext",
     "declaration": true,
-    "declarationDir": "./dist/types",  // Emit declaration files into this directory
-    "emitDeclarationOnly": false,
-    "moduleResolution": "bundler",     // Use bundler for module resolution
+    "outDir": "./dist",
     "strict": true,
+    "moduleResolution": "node",
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
