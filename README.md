@@ -44,7 +44,7 @@ bunx jsr add @razmans/console-better
 First, import the `consoleBetter` library in your TypeScript file:
 
 ```typescript
-import { LogLevel } from 'console.better';
+import { LogLevel, log } from 'console.better';
 ```
 
 ### Logging Messages
