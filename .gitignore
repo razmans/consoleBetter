@@ -1,3 +1,8 @@
-/node_modules
-/dist
+# Ignore JavaScript files
+*.js
 package-lock.json
+
+# Other ignores
+node_modules/
+dist/
+build/
