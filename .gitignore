@@ -4,5 +4,4 @@ package-lock.json
 
 # Other ignores
 node_modules/
-dist/
 build/
