@@ -3,6 +3,7 @@ class ConsoleBetter {
 
   /**
    * @module log
+   * @property {message, level} - The message to log and the log level
    * @param message
    * @param level
    * @example `log.better('This is an informational message.', LogLevel.INFO);`
@@ -20,7 +21,9 @@ class ConsoleBetter {
   }
 
   /**
-   * * @module toggleDebug
+   * *
+   * @module toggleDebug
+   * @property {boolean} enabled - Whether to enable debug mode
    * @param {boolean} enabled - Whether to enable debug mode
    * @example `console.better.toggleDebug(true);` //to enable debug mode
    * @example `console.better.toggleDebug(false);` //to disable debug mode
@@ -46,6 +49,7 @@ class ConsoleBetter {
 
 /**
  * Enum for log levels
+ * @module LogLevel
  * @readonly
  * @enum {string}
  * @property {string} DEBUG - Debug level
