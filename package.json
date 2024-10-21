@@ -1,37 +1,9 @@
 {
-  "name": "@razmans/console-better", 
-  "version": "1.0.0", 
-  "description": "A TypeScript library that enhances the JavaScript console with additional logging capabilities.",
-  "main": "dist/index.js", 
-  "types": "dist/types/consoleBetter.d.ts",
-  "scripts": {
-    "build": "tsc", 
-    "clean": "rimraf dist", 
-    "prepare": "npm run clean && npm run build" 
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/console-better.git" 
-  },
-  "keywords": [
-    "console",
-    "logging",
-    "typescript",
-    "debugging"
-  ],
-  "author": "Razman", 
-  "license": "MIT", 
-  "dependencies": {
-
-  },
-  "devDependencies": {
-    "typescript": "^5.0.0", 
-    "rimraf": "^5.0.0" 
-  },
-  "publishConfig": {
-    "access": "public" 
-  },
+  "name": "@razmans/console-better",
+  "version": "1.0.0",
+  "main": "dist/consoleBetter.js",   
+  "types": "dist/types/index.d.ts",  
   "files": [
-    "dist/**/*" 
+    "dist/**/*"                      
   ]
 }
