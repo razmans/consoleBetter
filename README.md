@@ -12,8 +12,29 @@
 
 To install `consoleBetter`, you can use npm:
 
+NPM
 ```bash
-npm install console.better
+npx jsr add @razmans/console-better
+```
+
+Deno
+```bash
+deno add jsr:@razmans/console-better
+```
+
+Yarn
+```bash
+yarn dlx jsr add @razmans/console-better
+```
+
+Pnpm
+```bash
+pnpm dlx jsr add @razmans/console-better
+```
+
+Bun
+```bash
+bunx jsr add @razmans/console-better
 ```
 
 ## Usage
