@@ -2,7 +2,7 @@ class ConsoleBetter {
   private debugEnabled: boolean = false;
 
   /**
-   * @module log
+   * @module better
    * @property {message, level} - The message to log and the log level
    * @param message
    * @param level
@@ -26,8 +26,8 @@ class ConsoleBetter {
    * @module toggleDebug
    * @property {boolean} enabled - Whether to enable debug mode
    * @param {boolean} enabled - Whether to enable debug mode
-   * @example `console.better.toggleDebug(true);` //to enable debug mode
-   * @example `console.better.toggleDebug(false);` //to disable debug mode
+   * @example `log.toggleDebug(true);` //to enable debug mode
+   * @example `log.toggleDebug(false);` //to disable debug mode
    * By default, log.better will be disabled if toggleDebug==false
    */
   public toggleDebug(enabled: boolean) {
@@ -72,5 +72,21 @@ const colorCodes: { [key in LogLevel]: string } = {
   [LogLevel.FUNKY]: '\x1b[35m' // Magenta
 };
 
+/**
+ * Custom logger
+ * @module ConsoleBetter
+ * @example `const log: ConsoleBetter = new ConsoleBetter();`
+ * @example `log.better('This is an informational message.', LogLevel.INFO);`
+ * @example `log.better('This is a warning message.', LogLevel.WARN);`
+ * @example `log.better('This is an error message.', LogLevel.ERROR);`
+ * @example `log.better('This is a funky message!', LogLevel.FUNKY);`
+ * @example `log.better('This is a debug message.', LogLevel.DEBUG);`
+ * @example `log.better('This is an informational message.');`
+ * @example `log.toggleDebug(true);` //to enable debug mode
+ * @example `log.toggleDebug(false);` //to disable debug mode
+ * @example `log.trackPerformance(() => {
+ * // Code to track performance
+ * })`; *
+ */
 // Create a global instance of the custom logger
 export const log: ConsoleBetter = new ConsoleBetter();
