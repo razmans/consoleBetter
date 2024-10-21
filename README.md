@@ -44,7 +44,7 @@ bunx jsr add @razmans/console-better
 First, import the `consoleBetter` library in your TypeScript file:
 
 ```typescript
-import { LogLevel, log } from 'console.better';
+import { LogLevel, log } from "@razmans/console-better";
 ```
 
 ### Logging Messages
@@ -82,8 +82,9 @@ log.trackPerformance(() => {
 
 Here's a complete example demonstrating the usage of `consoleBetter`:
 
+
 ```typescript
-import { LogLevel,log } from 'console.better';
+import { LogLevel,log } from "@razmans/console-better";
 
 // Enable debug logging
 log.toggleDebug(true);
