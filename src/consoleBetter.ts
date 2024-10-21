@@ -68,4 +68,4 @@ const colorCodes: { [key in LogLevel]: string } = {
 };
 
 // Create a global instance of the custom logger
-export const log = new ConsoleBetter();
+export const log: ConsoleBetter = new ConsoleBetter();
