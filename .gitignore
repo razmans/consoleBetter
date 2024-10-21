@@ -1,5 +1,4 @@
 # Ignore JavaScript files
-*.js
 package-lock.json
 
 # Other ignores
