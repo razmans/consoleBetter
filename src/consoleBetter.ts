@@ -4,12 +4,12 @@ class ConsoleBetter {
   /* * @module log
    * @param {string} message - The message to log
    * @param {LogLevel} [level=LogLevel.INFO] - The log level
-   * @example `console.better.log('This is an informational message.', LogLevel.INFO);`
-   * @example `console.better.log('This is a warning message.', LogLevel.WARN);`
-   * @example `console.better.log('This is an error message.', LogLevel.ERROR);`
-   * @example `console.better.log('This is a funky message!', LogLevel.FUNKY);`
-   * @example `console.better.log('This is a debug message.', LogLevel.DEBUG);`
-   * @example `console.better.log('This is an informational message.');`
+   * @example `log.better('This is an informational message.', LogLevel.INFO);`
+   * @example `log.better('This is a warning message.', LogLevel.WARN);`
+   * @example `log.better('This is an error message.', LogLevel.ERROR);`
+   * @example `log.better('This is a funky message!', LogLevel.FUNKY);`
+   * @example `log.better('This is a debug message.', LogLevel.DEBUG);`
+   * @example `log.better('This is an informational message.');`
    *
    */
   better(message: string, level: LogLevel = LogLevel.INFO) {
@@ -24,7 +24,7 @@ class ConsoleBetter {
    * @param {boolean} enabled - Whether to enable debug mode
    * @example `console.better.toggleDebug(true);` //to enable debug mode
    * @example `console.better.toggleDebug(false);` //to disable debug mode
-   * By default, console.better.log will be disabled if toggleDebug==false
+   * By default, log.better will be disabled if toggleDebug==false
    */
   toggleDebug(enabled: boolean) {
     this.debugEnabled = enabled;
@@ -32,7 +32,7 @@ class ConsoleBetter {
 
   /* @module trackPerformance
    * @param {Function} callback - The function to track performance
-   * @example `console.better.trackPerformance(() => {
+   * @example `log.trackPerformance(() => {
    *  // Code to track performance
    * })`;
    */

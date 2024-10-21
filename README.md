@@ -31,11 +31,11 @@ import { LogLevel } from 'console.better';
 You can log messages using different log levels:
 
 ```typescript
-console.better.log('This is a debug message.', LogLevel.DEBUG);
-console.better.log('This is an informational message.', LogLevel.INFO);
-console.better.log('This is a warning message.', LogLevel.WARN);
-console.better.log('This is an error message.', LogLevel.ERROR);
-console.better.log('This is a funky message!', LogLevel.FUNKY);
+log.better('This is a debug message.', LogLevel.DEBUG);
+log.better('This is an informational message.', LogLevel.INFO);
+log.better('This is a warning message.', LogLevel.WARN);
+log.better('This is an error message.', LogLevel.ERROR);
+log.better('This is a funky message!', LogLevel.FUNKY);
 ```
 
 ### Toggling Debug Mode
@@ -43,8 +43,8 @@ console.better.log('This is a funky message!', LogLevel.FUNKY);
 You can enable or disable debug logging:
 
 ```typescript
-console.better.toggleDebug(true);  // Enable debug logging
-console.better.toggleDebug(false); // Disable debug logging
+log.toggleDebug(true);  // Enable debug logging
+log.toggleDebug(false); // Disable debug logging
 ```
 
 ### Performance Tracking
@@ -52,7 +52,7 @@ console.better.toggleDebug(false); // Disable debug logging
 You can track the performance of any function by wrapping it in `trackPerformance`:
 
 ```typescript
-console.better.trackPerformance(() => {
+log.trackPerformance(() => {
   // Your code here
 });
 ```
@@ -65,19 +65,19 @@ Here's a complete example demonstrating the usage of `consoleBetter`:
 import { LogLevel } from 'console.better';
 
 // Enable debug logging
-console.better.toggleDebug(true);
+log.toggleDebug(true);
 
 // Log messages
-console.better.log('This is a debug message.', LogLevel.DEBUG);
-console.better.log('This is an informational message.', LogLevel.INFO);
+log.better('This is a debug message.', LogLevel.DEBUG);
+log.better('This is an informational message.', LogLevel.INFO);
 
 // Track performance
-console.better.trackPerformance(() => {
+log.trackPerformance(() => {
   let sum = 0;
   for (let i = 0; i < 1e6; i++) {
     sum += i;
   }
-  console.better.log(`Sum is: ${sum}`, LogLevel.INFO);
+  log.better(`Sum is: ${sum}`, LogLevel.INFO);
 });
 ```
 
