@@ -1,4 +1,4 @@
-class ConsoleBetter {
+export class ConsoleBetter {
   private debugEnabled: boolean = false;
 
   /**
@@ -89,4 +89,4 @@ const colorCodes: { [key in LogLevel]: string } = {
  * })`; *
  */
 // Create a global instance of the custom logger
-export const log: ConsoleBetter = new ConsoleBetter();
+export const log = new ConsoleBetter();
