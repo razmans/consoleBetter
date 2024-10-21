@@ -4,5 +4,5 @@ declare module '@razmans/console-better' {
     trackPerformance(): any; // Declare method with 'any' for now
   }
 
-  export const log: any; // Declare your log variable with 'any' type
+  export const log: ConsoleBetter; // Declare your log variable with 'any' type
 }
