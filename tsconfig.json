@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "Node16",                    // Change this to 'esnext' or 'commonjs' as needed
-    "moduleResolution": "node16",  
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
