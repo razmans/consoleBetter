@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "strict": true,
+    "module": "Node16",
+    "moduleResolution": "node16", // or 'nodenext'
+    "declaration": true,
+    "outDir": "./_dist",
+    "rootDir": "./src",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist",
-    "allowImportingTsExtensions": true,
-    "declaration": true,          // Add this line
-    "emitDeclarationOnly": true   // This can remain as is
+    "emitDeclarationOnly": true,
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
