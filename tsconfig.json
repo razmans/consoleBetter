@@ -1,13 +1,10 @@
 {
   "compilerOptions": {
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
     "declaration": true,
-    "outDir": "./_dist",
+    "outDir": "./dist",
     "rootDir": "./src",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "emitDeclarationOnly": true,
     "noEmit":false
   },
   "include": ["src/**/*"],
