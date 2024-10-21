@@ -1,4 +1,3 @@
-```markdown
 # consoleBetter
 
 `consoleBetter` is a TypeScript library that enhances the JavaScript console with additional logging capabilities, allowing for improved debugging and performance tracking. It provides a simple interface for logging messages with different levels, toggling debug mode, and measuring performance for specific functions.
