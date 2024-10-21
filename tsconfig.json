@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "allowImportingTsExtensions": true,
+    "declaration": true,          // Add this line
+    "emitDeclarationOnly": true   // This can remain as is
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
