@@ -1,18 +1,18 @@
 class ConsoleBetter {
   private debugEnabled: boolean = false;
 
-  /* * @module log
-   * @param {string} message - The message to log
-   * @param {LogLevel} [level=LogLevel.INFO] - The log level
+  /**
+   * @module log
+   * @param message
+   * @param level
    * @example `log.better('This is an informational message.', LogLevel.INFO);`
    * @example `log.better('This is a warning message.', LogLevel.WARN);`
    * @example `log.better('This is an error message.', LogLevel.ERROR);`
    * @example `log.better('This is a funky message!', LogLevel.FUNKY);`
    * @example `log.better('This is a debug message.', LogLevel.DEBUG);`
    * @example `log.better('This is an informational message.');`
-   *
    */
-  better(message: string, level: LogLevel = LogLevel.INFO) {
+  public better(message: string, level: LogLevel = LogLevel.INFO) {
     if (level === LogLevel.DEBUG && !this.debugEnabled) return;
     const color = colorCodes[level] || '\x1b[0m'; // Default color
     const resetColor = '\x1b[0m'; // Reset color
@@ -26,7 +26,7 @@ class ConsoleBetter {
    * @example `console.better.toggleDebug(false);` //to disable debug mode
    * By default, log.better will be disabled if toggleDebug==false
    */
-  toggleDebug(enabled: boolean) {
+  public toggleDebug(enabled: boolean) {
     this.debugEnabled = enabled;
   }
 
@@ -36,7 +36,7 @@ class ConsoleBetter {
    *  // Code to track performance
    * })`;
    */
-  trackPerformance(callback: () => void) {
+  public trackPerformance(callback: () => void) {
     const start = performance.now();
     callback();
     const end = performance.now();
