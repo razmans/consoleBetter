@@ -10,7 +10,7 @@
 
 ## Installation
 
-To install `consoleBetter`, you can use npm:
+To install `consoleBetter`, you can use:
 
 NPM
 ```bash
