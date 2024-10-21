@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es2020",
-    "module": "esnext",
-    "declaration": true,
+    "target": "esnext",
+    "module": "es2020",              // Align with the consumer's es2020 setting
     "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "emitDeclarationOnly": false,
+    "moduleResolution": "node",      // Match the consumer's moduleResolution
     "strict": true,
-    "moduleResolution": "node",
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "skipLibCheck": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]

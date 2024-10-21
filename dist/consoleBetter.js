@@ -1,7 +1,5 @@
 class ConsoleBetter {
-    constructor() {
-        this.debugEnabled = false;
-    }
+    debugEnabled = false;
     /**
      * @module better
      * @property {message, level} - The message to log and the log level

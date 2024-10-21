@@ -24,6 +24,13 @@ declare class ConsoleBetter {
      * By default, log.better will be disabled if toggleDebug==false
      */
     toggleDebug(enabled: boolean): void;
+    /**
+    /* @module trackPerformance
+     * @param {Function} callback - The function to track performance
+     * @example `log.trackPerformance(() => {
+     *  // Code to track performance
+     * })`;
+     */
     trackPerformance(callback: () => void): void;
 }
 /**
