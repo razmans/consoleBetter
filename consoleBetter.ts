@@ -11,7 +11,7 @@
  * @example `Log('This is an informational message.');`
  * @returns {void}
  */
-export function Log(message: string, level: LogLevel = LogLevel.INFO) {
+export function Log(message: string, level: LogLevel = LogLevel.INFO): void {
   const color = colorCodes[level] || '\x1b[0m'; // Default color
   const resetColor = '\x1b[0m'; // Reset color
   console.log(`${color}[${level}] ${message}${resetColor}`);
@@ -24,7 +24,7 @@ export function Log(message: string, level: LogLevel = LogLevel.INFO) {
    *  // Code to track performance
    * })`;
    */
-export function TrackPerformance(callback: () => void) {
+export function TrackPerformance(callback: () => void): void {
   const start = performance.now();
   callback();
   const end = performance.now();
