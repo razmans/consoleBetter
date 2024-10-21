@@ -83,7 +83,7 @@ log.trackPerformance(() => {
 Here's a complete example demonstrating the usage of `consoleBetter`:
 
 ```typescript
-import { LogLevel } from 'console.better';
+import { LogLevel,log } from 'console.better';
 
 // Enable debug logging
 log.toggleDebug(true);
