@@ -1,0 +1,33 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+      "baseUrl": "./",
+      "outDir": "./dist/out-tsc",
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "noImplicitOverride": true,
+      "noPropertyAccessFromIndexSignature": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "sourceMap": true,
+      "declaration": true, // Set to true to generate declaration files
+      "downlevelIteration": true,
+      "experimentalDecorators": true,
+      "moduleResolution": "Node16", // Set module resolution to Node16
+      "importHelpers": true,
+      "target": "es2020", // Keep this as es2020 or change to es2022 based on your needs
+      "module": "Node16", // Change to Node16
+      "lib": [
+        "es2018",
+        "dom"
+      ],
+      "useDefineForClassFields": false
+    },
+    "angularCompilerOptions": {
+      "enableI18nLegacyMessageIdFormat": false,
+      "strictInjectionParameters": true,
+      "strictInputAccessModifiers": true,
+      "strictTemplates": true
+    }
+  }
+  

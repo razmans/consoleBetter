@@ -1,3 +1,6 @@
+import { LogLevel } from './consoleBetter'; // Adjust the import path based on your structure
+
+// Augmenting the global Console interface
 declare global {
   interface Console {
     better: {
@@ -5,6 +8,6 @@ declare global {
       toggleDebug: (enabled: boolean) => void;
       trackPerformance: (callback: () => void) => void;
     };
-    debugEnabled: boolean; // Add debugEnabled as a property
+    debugEnabled: boolean;
   }
 }
