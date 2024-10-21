@@ -44,7 +44,7 @@ bunx jsr add @razmans/console-better
 First, import the `consoleBetter` library in your TypeScript file:
 
 ```typescript
-import { LogLevel, log } from "@razmans/console-better";
+import { LogLevel, Log } from "@razmans/console-better";
 ```
 
 ### Logging Messages
@@ -52,20 +52,11 @@ import { LogLevel, log } from "@razmans/console-better";
 You can log messages using different log levels:
 
 ```typescript
-log.better('This is a debug message.', LogLevel.DEBUG);
-log.better('This is an informational message.', LogLevel.INFO);
-log.better('This is a warning message.', LogLevel.WARN);
-log.better('This is an error message.', LogLevel.ERROR);
-log.better('This is a funky message!', LogLevel.FUNKY);
-```
-
-### Toggling Debug Mode
-
-You can enable or disable debug logging:
-
-```typescript
-log.toggleDebug(true);  // Enable debug logging
-log.toggleDebug(false); // Disable debug logging
+Log('This is a debug message.', LogLevel.DEBUG);
+Log('This is an informational message.', LogLevel.INFO);
+Log('This is a warning message.', LogLevel.WARN);
+Log('This is an error message.', LogLevel.ERROR);
+Log('This is a funky message!', LogLevel.FUNKY);
 ```
 
 ### Performance Tracking
@@ -73,7 +64,7 @@ log.toggleDebug(false); // Disable debug logging
 You can track the performance of any function by wrapping it in `trackPerformance`:
 
 ```typescript
-log.trackPerformance(() => {
+TrackPerformance(() => {
   // Your code here
 });
 ```
@@ -84,17 +75,15 @@ Here's a complete example demonstrating the usage of `consoleBetter`:
 
 
 ```typescript
-import { LogLevel,log } from "@razmans/console-better";
+import { LogLevel,Log } from "@razmans/console-better";
 
-// Enable debug logging
-log.toggleDebug(true);
 
 // Log messages
-log.better('This is a debug message.', LogLevel.DEBUG);
-log.better('This is an informational message.', LogLevel.INFO);
+Log('This is a debug message.', LogLevel.DEBUG);
+Log('This is an informational message.', LogLevel.INFO);
 
 // Track performance
-log.trackPerformance(() => {
+TrackPerformance(() => {
   let sum = 0;
   for (let i = 0; i < 1e6; i++) {
     sum += i;
