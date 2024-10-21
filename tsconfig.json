@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "Node16",               // Align 'module' with 'moduleResolution'
+    "module": "esnext",                // Keep 'esnext' for modern module output
     "outDir": "./dist",
     "declaration": true,
-    "declarationDir": "./dist/types", // Emit declarations to a types folder
+    "declarationDir": "./dist/types",  // Emit declaration files into this directory
     "emitDeclarationOnly": false,
-    "moduleResolution": "Node16",     // Use Node16 module resolution strategy
+    "moduleResolution": "bundler",     // Use bundler for module resolution
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true
