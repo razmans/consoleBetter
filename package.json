@@ -1,9 +1,9 @@
 {
   "name": "@razmans/console-better",
   "version": "1.0.0",
-  "main": "dist/consoleBetter.js",  
-  "types": "dist/types/consoleBetter.d.ts",  
-  "files": [
-    "dist/**/*"                      
-  ]
+  "main": "./dist/index.js",
+  "types": "./dist/types/consoleBetter.d.ts",
+  "scripts": {
+    "build": "tsc"
+  }
 }
