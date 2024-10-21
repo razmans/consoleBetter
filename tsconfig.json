@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "ES2016",
+    "module": "node16",
     "outDir": "./dist",             // Specify the output directory
     "declaration": true,             // Generate declaration files
     "emitDeclarationOnly": true,     // Only emit declaration files
-    "moduleResolution": "node",      // Use Node-style module resolution
+    "moduleResolution": "Node16",      // Use Node-style module resolution
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true
