@@ -12,7 +12,7 @@ class ConsoleBetter {
    * @example `console.better.log('This is an informational message.');`
    *
    */
-  log(message: string, level: LogLevel = LogLevel.INFO) {
+  better(message: string, level: LogLevel = LogLevel.INFO) {
     if (level === LogLevel.DEBUG && !this.debugEnabled) return;
     const color = colorCodes[level] || '\x1b[0m'; // Default color
     const resetColor = '\x1b[0m'; // Reset color
