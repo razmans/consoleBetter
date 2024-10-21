@@ -18,12 +18,12 @@ export function Log(message: string, level: LogLevel = LogLevel.INFO): void {
 }
 
 /**
-  /* @module TrackPerformance
-   * @param {Function} callback - The function to track performance
-   * @example `TrackPerformance(() => {
-   *  // Code to track performance
-   * })`;
-   */
+ * @module TrackPerformance
+ * @param {Function} callback - The function to track performance
+ * @example `TrackPerformance(() => {
+ *  // Code to track performance
+ * })`;
+ */
 export function TrackPerformance(callback: () => void): void {
   const start = performance.now();
   callback();
