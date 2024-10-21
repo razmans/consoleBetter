@@ -1,6 +1,6 @@
 {
     "name": "@razmans/console-better",
-    "version": "1.1.00",
+    "version": "1.1.0",
     "license": "MIT",
     "exports": "./index.ts"
   }
