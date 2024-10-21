@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES2016",
-    "module": "node16",
-    "outDir": "./dist",             // Specify the output directory
-    "declaration": true,             // Generate declaration files
-    "emitDeclarationOnly": true,     // Only emit declaration files
-    "moduleResolution": "Node16",      // Use Node-style module resolution
+    "target": "esnext",
+    "module": "Node16",               // Align 'module' with 'moduleResolution'
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "./dist/types", // Emit declarations to a types folder
+    "emitDeclarationOnly": false,
+    "moduleResolution": "Node16",     // Use Node16 module resolution strategy
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var consoleBetter_1 = require("./consoleBetter");
+const consoleBetter_1 = require("./consoleBetter");
 // Enable debug mode
 consoleBetter_1.log.toggleDebug(true);
 // Test: Log different levels
@@ -17,11 +17,11 @@ consoleBetter_1.log.better('This DEBUG message should not appear', consoleBetter
 consoleBetter_1.log.better('This INFO message should appear', consoleBetter_1.LogLevel.INFO);
 // Test: Performance tracking
 console.log('\nTest: Performance tracking');
-consoleBetter_1.log.trackPerformance(function () {
+consoleBetter_1.log.trackPerformance(() => {
     // Performance test for a sample task
-    var sum = 0;
-    for (var i = 0; i < 1e6; i++) {
+    let sum = 0;
+    for (let i = 0; i < 1e6; i++) {
         sum += i;
     }
-    consoleBetter_1.log.better("Sum is: ".concat(sum), consoleBetter_1.LogLevel.INFO);
+    consoleBetter_1.log.better(`Sum is: ${sum}`, consoleBetter_1.LogLevel.INFO);
 });
