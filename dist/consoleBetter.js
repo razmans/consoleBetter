@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.log = exports.LogLevel = void 0;
 class ConsoleBetter {
     constructor() {
         this.debugEnabled = false;
@@ -56,14 +59,14 @@ class ConsoleBetter {
  * @property {string} DEBUG - Debug level
  * @example LogLevel.DEBUG
  */
-export var LogLevel;
+var LogLevel;
 (function (LogLevel) {
     LogLevel["DEBUG"] = "DEBUG";
     LogLevel["INFO"] = "INFO";
     LogLevel["WARN"] = "WARN";
     LogLevel["ERROR"] = "ERROR";
     LogLevel["FUNKY"] = "FUNKY";
-})(LogLevel || (LogLevel = {}));
+})(LogLevel || (exports.LogLevel = LogLevel = {}));
 const colorCodes = {
     [LogLevel.DEBUG]: '\x1b[34m', // Blue
     [LogLevel.INFO]: '\x1b[32m', // Green
@@ -88,4 +91,4 @@ const colorCodes = {
  * })`; *
  */
 // Create a global instance of the custom logger
-export const log = new ConsoleBetter();
+exports.log = new ConsoleBetter();
