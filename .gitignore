@@ -4,3 +4,9 @@ package-lock.json
 # Other ignores
 node_modules/
 build/
+
+src/test.js
+src/test.ts
+dist/types/test.d.ts
+dist/test.d.ts
+dist/test.js
