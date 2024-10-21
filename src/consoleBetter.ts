@@ -12,6 +12,7 @@ class ConsoleBetter {
    * @example `log.better('This is a funky message!', LogLevel.FUNKY);`
    * @example `log.better('This is a debug message.', LogLevel.DEBUG);`
    * @example `log.better('This is an informational message.');`
+   * @returns {void}
    */
   public better(message: string, level: LogLevel = LogLevel.INFO) {
     if (level === LogLevel.DEBUG && !this.debugEnabled) return;
