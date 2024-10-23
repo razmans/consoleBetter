@@ -57,6 +57,10 @@ Log('This is an informational message.', LogLevel.INFO);
 Log('This is a warning message.', LogLevel.WARN);
 Log('This is an error message.', LogLevel.ERROR);
 Log('This is a funky message!', LogLevel.FUNKY);
+Log('This is a high priority message!', LogLevel.HIGH);
+Log('This is a medium priority message!', LogLevel.MEDIUM);
+Log('This is a low priority message!', LogLevel.LOW);
+Log('This is a Pikachu message!',LogLevel.PIKACHU);
 ```
 
 ### Performance Tracking
@@ -67,6 +71,16 @@ You can track the performance of any function by wrapping it in `trackPerformanc
 TrackPerformance(() => {
   // Your code here
 });
+
+//You can also set iterations
+TrackPerformance(() => {
+  // Code to set 552 iterations
+  }, 552);
+
+//You can also set iterations + threshold
+TrackPerformance(() => {
+ // Code to set 1000 iterations with a threshold of 7 ms
+ }, 1000, 7);
 ```
 
 ### Example
@@ -90,6 +104,25 @@ TrackPerformance(() => {
   }
   log.better(`Sum is: ${sum}`, LogLevel.INFO);
 });
+
+// Track performance, run it 11 times
+TrackPerformance(() => {
+  let sum = 0;
+  for (let i = 0; i < 1e6; i++) {
+    sum += i;
+  }
+  log.better(`Sum is: ${sum}`, LogLevel.INFO);
+},11);
+
+// Track performance, run it 33 times with a threshold of 12ms
+TrackPerformance(() => {
+  let sum = 0;
+  for (let i = 0; i < 1e6; i++) {
+    sum += i;
+  }
+  log.better(`Sum is: ${sum}`, LogLevel.INFO);
+},33, 12);
+
 ```
 
 ## License

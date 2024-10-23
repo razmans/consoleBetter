@@ -1,27 +1,35 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const consoleBetter_1 = require("./consoleBetter");
-// Test logging messages at various levels
-console.log('Testing the Log function:');
-(0, consoleBetter_1.Log)('This is an informational message.', consoleBetter_1.LogLevel.INFO);
-(0, consoleBetter_1.Log)('This is a warning message.', consoleBetter_1.LogLevel.WARN);
-(0, consoleBetter_1.Log)('This is an error message.', consoleBetter_1.LogLevel.ERROR);
-(0, consoleBetter_1.Log)('This is a funky message!', consoleBetter_1.LogLevel.FUNKY);
-(0, consoleBetter_1.Log)('This is a debug message.', consoleBetter_1.LogLevel.DEBUG);
-(0, consoleBetter_1.Log)('This is an informational message.'); // Defaults to INFO level
-// Test performance tracking
-console.log('\nTesting the TrackPerformance function:');
-(0, consoleBetter_1.TrackPerformance)(() => {
-    // Simulate some work by using a delay
-    for (let i = 0; i < 1e6; i++) {
-        Math.sqrt(i);
-    }
-});
-(0, consoleBetter_1.TrackPerformance)(() => {
-    // Another example with different logic
-    let sum = 0;
-    for (let i = 0; i < 1e5; i++) {
-        sum += i;
-    }
-    console.log(`Sum: ${sum}`);
-});
+import { Log, TrackPerformance, LogLevel, toggleDebug } from './index.js'; // Replace with the actual file name
+function testLog() {
+    console.log('--- Testing Log Function ---');
+    // Test INFO level (default)
+    Log('This is an informational message.'); // Should log with INFO level
+    // Test different log levels
+    Log('This is a debug message.', LogLevel.DEBUG); // Should not show if debug is disabled
+    Log('This is a warning message.', LogLevel.WARN); // Should log with WARN level
+    Log('This is an error message.', LogLevel.ERROR); // Should log with ERROR level
+    Log('This is a funky message!', LogLevel.FUNKY); // Should log with FUNKY level
+    // Enable debug mode and test DEBUG level
+    toggleDebug(true);
+    Log('This is a debug message (debug enabled).', LogLevel.DEBUG); // Should log with DEBUG level
+    toggleDebug(false);
+    console.log('--- End of Log Function Test ---\n');
+}
+function testTrackPerformance() {
+    console.log('--- Testing TrackPerformance Function ---');
+    // A sample function to track
+    const sampleTask = () => {
+        for (let i = 0; i < 1e6; i++) { } // Simple loop for delay
+    };
+    // Test with a single iteration
+    TrackPerformance(sampleTask);
+    // Test with multiple iterations
+    TrackPerformance(sampleTask, 5);
+    // Test with a threshold
+    TrackPerformance(sampleTask, 5, 0.4); // Set a low threshold to trigger warnings
+    console.log('--- End of TrackPerformance Function Test ---\n');
+}
+function runTests() {
+    testLog();
+    testTrackPerformance();
+}
+runTests();
